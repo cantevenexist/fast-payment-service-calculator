@@ -23,35 +23,35 @@
             min-height: 100vh;
             background: white;
             position: relative;
-            padding: 40px 20px;
+            padding: 20px 15px;
             overflow-x: hidden;
         }
         
         .flex-wrapper {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 30px;
             justify-content: space-between;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             position: relative;
         }
         
         .left-column {
             flex: 1.2;
-            min-width: 280px;
+            min-width: 260px;
             position: relative;
             display: flex;
             flex-direction: column;
-            gap: 50px;
+            gap: 30px;
         }
         
         .element-wrapper,
         .element-wrapper-with-text {
             position: relative;
             width: 100%;
-            padding-top: 63px;
-            padding-left: 63px;
+            padding-top: 45px;
+            padding-left: 45px;
         }
         
         .element {
@@ -60,8 +60,8 @@
         }
         
         .circle {
-            width: 210px;
-            height: 210px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             display: flex;
             flex-direction: column;
@@ -78,13 +78,13 @@
         }
         
         .circle .percent {
-            font-size: clamp(24px, 4vw, 32px);
+            font-size: 24px;
             font-weight: 800;
             line-height: 1.2;
         }
         
         .circle .max {
-            font-size: clamp(12px, 2vw, 14px);
+            font-size: 11px;
             font-weight: 600;
             line-height: 1.4;
             margin-top: 5px;
@@ -93,63 +93,60 @@
         .rect-block {
             width: 100%;
             min-width: 200px;
-            height: 197px;
-            padding-left: 180px;
-            padding-right: 30px;
+            height: 140px;
+            padding-left: 120px;
+            padding-right: 20px;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             text-align: left;
             font-weight: bold;
-            border-radius: 98.5px;
+            border-radius: 70px;
             position: relative;
             z-index: 2;
         }
         
         .rect-block .title {
             font-weight: 800;
-            line-height: 1;
+            line-height: 1.2;
             white-space: pre-line;
             display: block;
             width: 100%;
         }
         
-        /* Общие стили для всех групп */
         .group-main {
             font-weight: 800;
             display: block;
-            font-size: 30px;
+            font-size: 22px;
         }
         
         .group-label {
-            font-size: 16px;  /* Увеличено с 14px на 2px */
+            font-size: 13px;
             font-weight: 600;
             opacity: 0.9;
             display: block;
         }
         
         .exclusion-text {
-            font-size: 16px;  /* Увеличено с 14px на 2px */
+            font-size: 12px;
             font-weight: 700;
-            margin-top: 5px;
+            margin-top: 3px;
             letter-spacing: 0.3px;
             display: block;
         }
         
-        /* Специфичные размеры для разных групп */
         .element-1 .title {
-            font-size: 24px;
+            font-size: 18px;
         }
         
         .element-2 .title {
-            font-size: 22px;
+            font-size: 16px;
         }
         
         .element-3 .title {
-            font-size: 28px;
+            font-size: 20px;
         }
         
-        /* Цвета для разных групп */
         .element-1 .circle {
             background: #F1B84D;
         }
@@ -183,24 +180,24 @@
         .extra-text {
             color: #404040;
             font-weight: 600;
-            font-size: clamp(11px, 2vw, 14px);
-            line-height: 1.5;
-            padding: 20px;
-            padding-top: 25px;
-            padding-left: 70px;
+            font-size: 14px;
+            line-height: 1.4;
+            padding: 12px;
+            padding-top: 18px;
+            padding-left: 50px;
             background: #eeeeee;
             border-radius: 20px;
             position: relative;
             z-index: 1;
-            margin-left: -63px;
-            width: calc(100% + 63px);
-            margin-top: -98.5px;
-            padding-top: 123.5px;
+            margin-left: -45px;
+            width: calc(100% + 45px);
+            margin-top: -70px;
+            padding-top: 88px;
         }
         
         .right-column {
             flex: 0.8;
-            min-width: 280px;
+            min-width: 260px;
             display: flex;
             flex-direction: column;
             gap: 30px;
@@ -208,135 +205,213 @@
         
         .right-big {
             width: 100%;
-            min-height: 500px;
             background: #65A5D3;
-            border-radius: 60px;
+            border-radius: 30px;
             position: relative;
             overflow: hidden;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            padding: 25px 20px;
+            gap: 20px;
         }
         
-        .right-part {
-            width: 50%;
-            height: 100%;
-            background: #89B6D6;
+        .info-rows-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            gap: 15px;
+        }
+        
+        .info-rows-container.vertical-layout .info-row {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 6px;
+        }
+        
+        .info-rows-container.vertical-layout .input-wrapper {
+            width: 100%;
+        }
+        
+        .info-label {
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            flex-shrink: 0;
+            min-width: 140px;
+        }
+        
+        .info-rows-container.vertical-layout .info-label {
+            min-width: auto;
+        }
+        
+        .input-wrapper {
+            width: 160px;
+            flex-shrink: 0;
+            position: relative;
+        }
+        
+        .input-wrapper input,
+        .input-wrapper select {
+            width: 100%;
+            padding: 8px 30px 8px 12px;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            background: white;
+            color: #333;
+            outline: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .input-wrapper input {
+            text-align: right;
+        }
+        
+        .input-wrapper select {
+            text-align: right;
+            text-align-last: right;
+            direction: rtl;
+        }
+        
+        .input-wrapper select option {
+            direction: ltr;
+            text-align: right;
+        }
+        
+        .input-wrapper select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: left 10px center;
+            background-size: 14px;
+        }
+        
+        .input-wrapper .symbol {
             position: absolute;
-            right: 0;
-            top: 0;
-            border-radius: 60px 60px 60px 0;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-weight: 500;
+            font-size: 13px;
+            pointer-events: none;
+        }
+        
+        .input-wrapper input:focus,
+        .input-wrapper select:focus {
+            box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+        }
+        
+        .input-wrapper input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        
+        .input-wrapper input[type="number"]::-webkit-inner-spin-button,
+        .input-wrapper input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
         
         .right-small {
             width: 100%;
-            min-height: 200px;
             background: #3F88C6;
-            border-radius: 60px;
+            border-radius: 30px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            padding: 20px;
+            gap: 15px;
         }
         
         .right-text {
             color: white;
             font-weight: bold;
-            font-size: clamp(18px, 3vw, 24px);
+            font-size: 18px;
             text-align: center;
-            padding: 20px;
+            padding: 0;
             position: relative;
             z-index: 2;
+        }
+        
+        .benefit-block {
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .benefit-label {
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .benefit-amount {
+            color: white;
+            font-size: 24px;
+            font-weight: 800;
+        }
+        
+        .benefit-note {
+            color: rgba(255,255,255,0.8);
+            font-size: 11px;
+            margin-top: 5px;
         }
         
         @media (max-width: 1024px) {
             .flex-wrapper {
                 flex-direction: column;
-                gap: 30px;
+                gap: 25px;
             }
             .left-column {
                 width: 100%;
-                gap: 30px;
+                gap: 25px;
             }
             .right-column {
                 width: 100%;
             }
             .element-wrapper,
             .element-wrapper-with-text {
-                padding-top: 57px;
-                padding-left: 57px;
+                padding-top: 40px;
+                padding-left: 40px;
             }
             .rect-block {
-                padding-left: 170px;
+                padding-left: 115px;
             }
             .extra-text {
-                margin-top: -98.5px;
-                padding-top: 123.5px;
-                padding-left: 60px;
-                margin-left: -57px;
-                width: calc(100% + 57px);
+                margin-top: -70px;
+                padding-top: 88px;
+                padding-left: 45px;
+                margin-left: -40px;
+                width: calc(100% + 40px);
+                font-size: 12px;
             }
-            .element-1 .title { font-size: 22px; }
-            .element-2 .title { font-size: 20px; }
-            .element-3 .title { font-size: 26px; }
-            .exclusion-text { font-size: 15px; }
         }
         
         @media (max-width: 768px) {
             .container {
-                padding: 20px 15px;
+                padding: 15px 12px;
             }
             .left-column {
-                gap: 20px;
+                gap: 25px;
             }
             .element-wrapper,
             .element-wrapper-with-text {
-                padding-top: 39px;
-                padding-left: 39px;
-            }
-            .circle {
-                width: 130px;
-                height: 130px;
-            }
-            .circle .percent {
-                font-size: 20px;
-            }
-            .circle .max {
-                font-size: 10px;
-            }
-            .rect-block {
-                padding-left: 110px;
-                padding-right: 15px;
-                height: auto;
-                min-height: 110px;
-                border-radius: 55px;
-            }
-            .group-main { font-size: 20px; }
-            .group-label { font-size: 13px; }
-            .exclusion-text { font-size: 12px; }
-            
-            .element-1 .title { font-size: 16px; }
-            .element-2 .title { font-size: 15px; }
-            .element-3 .title { font-size: 18px; }
-            
-            .extra-text {
-                margin-top: -55px;
-                padding-top: 70px;
-                padding-left: 30px;
-                padding-right: 30px;
-                margin-left: -39px;
-                width: calc(100% + 39px);
-                font-size: 10px;
-            }
-            .right-big { min-height: 250px; }
-            .right-small { min-height: 130px; }
-            .right-text { font-size: 16px; }
-        }
-        
-        @media (max-width: 480px) {
-            .element-wrapper,
-            .element-wrapper-with-text {
-                padding-top: 33px;
-                padding-left: 33px;
+                padding-top: 35px;
+                padding-left: 35px;
             }
             .circle {
                 width: 110px;
@@ -349,30 +424,134 @@
                 font-size: 9px;
             }
             .rect-block {
-                padding-left: 90px;
+                padding-left: 85px;
+                padding-right: 12px;
+                height: 100px;
+                min-height: 100px;
                 border-radius: 50px;
-                min-height: 90px;
             }
-            .group-main { font-size: 18px; }
-            .group-label { font-size: 12px; }
-            .exclusion-text { font-size: 11px; }
+            .group-main { font-size: 16px; }
+            .group-label { font-size: 11px; }
+            .exclusion-text { font-size: 10px; }
             
             .element-1 .title { font-size: 14px; }
             .element-2 .title { font-size: 13px; }
             .element-3 .title { font-size: 16px; }
             
             .extra-text {
-                margin-top: -45px;
+                margin-top: -50px;
+                padding-top: 65px;
+                padding-left: 35px;
+                padding-right: 15px;
+                margin-left: -35px;
+                width: calc(100% + 35px);
+                font-size: 11px;
+            }
+            
+            .right-big {
+                padding: 20px 15px;
+                gap: 15px;
+            }
+            
+            .info-label {
+                font-size: 13px;
+                min-width: auto;
+            }
+            
+            .input-wrapper {
+                width: 100%;
+            }
+            
+            .info-row {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 6px;
+            }
+            
+            .input-wrapper input,
+            .input-wrapper select {
+                padding: 8px 30px 8px 12px;
+                font-size: 13px;
+            }
+            
+            .input-wrapper .symbol {
+                font-size: 12px;
+                right: 12px;
+            }
+            
+            .right-small {
+                padding: 15px;
+            }
+            
+            .right-text {
+                font-size: 16px;
+            }
+            
+            .benefit-amount {
+                font-size: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .element-wrapper,
+            .element-wrapper-with-text {
+                padding-top: 30px;
+                padding-left: 30px;
+            }
+            .circle {
+                width: 90px;
+                height: 90px;
+            }
+            .circle .percent {
+                font-size: 16px;
+            }
+            .circle .max {
+                font-size: 8px;
+            }
+            .rect-block {
+                padding-left: 70px;
+                border-radius: 45px;
+                min-height: 80px;
+            }
+            .group-main { font-size: 14px; }
+            .group-label { font-size: 10px; }
+            .exclusion-text { font-size: 9px; }
+            
+            .extra-text {
+                margin-top: -40px;
                 padding-top: 55px;
-                padding-left: 20px;
-                padding-right: 20px;
-                margin-left: -33px;
-                width: calc(100% + 33px);
-                font-size: 9px;
+                padding-left: 25px;
+                margin-left: -30px;
+                width: calc(100% + 30px);
+                font-size: 8px;
+            }
+            
+            .right-big {
+                padding: 15px 12px;
+                gap: 12px;
+            }
+            
+            .info-label {
+                font-size: 12px;
+            }
+            
+            .input-wrapper input,
+            .input-wrapper select {
+                padding: 6px 25px 6px 10px;
+                font-size: 12px;
+            }
+            
+            .input-wrapper .symbol {
+                font-size: 11px;
+                right: 10px;
+            }
+            
+            .benefit-amount {
+                font-size: 18px;
             }
         }
     </style>
-    <title>Группы операций - Адаптивная версия</title>
+    <title>Группы операций - Калькулятор выгоды СБП</title>
 </head>
 <body>
     <div class="container">
@@ -432,20 +611,152 @@
             
             <div class="right-column">
                 <div class="right-big">
-                    <div class="right-text">
-                        ИНФОРМАЦИЯ<br>О ГРУППАХ
+                    <div class="info-rows-container" id="infoRowsContainer">
+                        <div class="info-row">
+                            <span class="info-label">Средняя выручка в месяц</span>
+                            <div class="input-wrapper">
+                                <input type="number" id="revenue" placeholder="0" value="0">
+                                <span class="symbol">₽</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-row">
+                            <span class="info-label">Тариф за эквайринг</span>
+                            <div class="input-wrapper">
+                                <input type="text" id="acquiringRate" placeholder="0" value="2">
+                                <span class="symbol">%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-row">
+                            <span class="info-label">Тариф СБП</span>
+                            <div class="input-wrapper">
+                                <select id="sbpRate">
+                                    <option value="0.2">0.2</option>
+                                    <option value="0.4" selected>0.4</option>
+                                    <option value="0.7">0.7</option>
+                                </select>
+                                <span class="symbol">%</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="right-part"></div>
                 </div>
                 
                 <div class="right-small">
                     <div class="right-text">
-                        ДОПОЛНИТЕЛЬНЫЕ<br>ДАННЫЕ
+                        ЭКОНОМИЯ<br>ПРИ ИСПОЛЬЗОВАНИИ СБП
+                    </div>
+                    <div class="benefit-block">
+                        <div class="benefit-label">Выгода за год</div>
+                        <div class="benefit-amount" id="benefitAmount">0 ₽</div>
+                        <div class="benefit-note">* по сравнению с эквайрингом</div>
                     </div>
                 </div>
             </div>
             
         </div>
     </div>
+
+    <script>
+        function calculateBenefit() {
+            // Получаем значения
+            const monthlyRevenue = parseFloat(document.getElementById('revenue').value) || 0;
+            const acquiringRate = parseFloat(document.getElementById('acquiringRate').value) || 0;
+            const sbpRate = parseFloat(document.getElementById('sbpRate').value) || 0;
+            
+            // Расчет годовой выручки
+            const yearlyRevenue = monthlyRevenue * 12;
+            
+            // Расчет комиссий
+            const acquiringFee = yearlyRevenue * (acquiringRate / 100);
+            const sbpFee = yearlyRevenue * (sbpRate / 100);
+            
+            // Расчет выгоды (разница между комиссиями)
+            const benefit = acquiringFee - sbpFee;
+            
+            // Форматирование результата
+            const formatter = new Intl.NumberFormat('ru-RU', {
+                style: 'currency',
+                currency: 'RUB',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            });
+            
+            // Отображение результата
+            const benefitElement = document.getElementById('benefitAmount');
+            if (benefit > 0) {
+                benefitElement.innerHTML = formatter.format(benefit);
+                benefitElement.style.color = '#90EE90';
+            } else if (benefit < 0) {
+                benefitElement.innerHTML = formatter.format(Math.abs(benefit));
+                benefitElement.style.color = '#FFCCCC';
+            } else {
+                benefitElement.innerHTML = '0 ₽';
+                benefitElement.style.color = 'white';
+            }
+        }
+        
+        // Получаем элементы
+        const revenueInput = document.getElementById('revenue');
+        const acquiringInput = document.getElementById('acquiringRate');
+        const sbpSelect = document.getElementById('sbpRate');
+        
+        // Добавляем обработчики событий для автоматического пересчета
+        revenueInput.addEventListener('input', calculateBenefit);
+        acquiringInput.addEventListener('input', calculateBenefit);
+        sbpSelect.addEventListener('change', calculateBenefit);
+        
+        // Дополнительная обработка для корректного парсинга чисел с точкой
+        acquiringInput.addEventListener('blur', function() {
+            let value = parseFloat(this.value);
+            if (!isNaN(value)) {
+                this.value = value;
+            }
+            calculateBenefit();
+        });
+        
+        // Запускаем расчет при загрузке
+        calculateBenefit();
+        
+        // Функция для адаптивного переключения лейблов
+        function checkLayout() {
+            const container = document.getElementById('infoRowsContainer');
+            if (!container) return;
+            
+            const rows = container.querySelectorAll('.info-row');
+            let needsVertical = false;
+            
+            rows.forEach(row => {
+                const label = row.querySelector('.info-label');
+                const inputWrapper = row.querySelector('.input-wrapper');
+                
+                if (label && inputWrapper) {
+                    const labelWidth = label.offsetWidth;
+                    const inputWidth = inputWrapper.offsetWidth;
+                    const gap = 15;
+                    const rowWidth = row.offsetWidth;
+                    
+                    if (labelWidth + inputWidth + gap > rowWidth) {
+                        needsVertical = true;
+                    }
+                }
+            });
+            
+            if (needsVertical) {
+                container.classList.add('vertical-layout');
+            } else {
+                container.classList.remove('vertical-layout');
+            }
+        }
+        
+        window.addEventListener('load', checkLayout);
+        window.addEventListener('resize', checkLayout);
+        
+        const observer = new ResizeObserver(checkLayout);
+        const container = document.getElementById('infoRowsContainer');
+        if (container) {
+            observer.observe(container);
+        }
+    </script>
 </body>
 </html>
