@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: white;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background: white;
+            position: relative;
+            padding: 40px 20px;
+            overflow-x: hidden;
+        }
+        
+        .flex-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .left-column {
+            flex: 1.2;
+            min-width: 280px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        
+        .element-wrapper,
+        .element-wrapper-with-text {
+            position: relative;
+            width: 100%;
+            padding-top: 63px;
+            padding-left: 63px;
+        }
+        
+        .element {
+            position: relative;
+            width: 100%;
+        }
+        
+        .circle {
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-30%, -30%);
+            z-index: 3;
+        }
+        
+        .circle .percent {
+            font-size: clamp(24px, 4vw, 32px);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        
+        .circle .max {
+            font-size: clamp(12px, 2vw, 14px);
+            font-weight: 600;
+            line-height: 1.4;
+            margin-top: 5px;
+        }
+        
+        .rect-block {
+            width: 100%;
+            min-width: 200px;
+            height: 197px;
+            padding-left: 180px;
+            padding-right: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            font-weight: bold;
+            border-radius: 98.5px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .rect-block .title {
+            font-weight: 800;
+            line-height: 1;
+            white-space: pre-line;
+            display: block;
+            width: 100%;
+        }
+        
+        /* Общие стили для всех групп */
+        .group-main {
+            font-weight: 800;
+            display: block;
+            font-size: 30px;
+        }
+        
+        .group-label {
+            font-size: 16px;  /* Увеличено с 14px на 2px */
+            font-weight: 600;
+            opacity: 0.9;
+            display: block;
+        }
+        
+        .exclusion-text {
+            font-size: 16px;  /* Увеличено с 14px на 2px */
+            font-weight: 700;
+            margin-top: 5px;
+            letter-spacing: 0.3px;
+            display: block;
+        }
+        
+        /* Специфичные размеры для разных групп */
+        .element-1 .title {
+            font-size: 24px;
+        }
+        
+        .element-2 .title {
+            font-size: 22px;
+        }
+        
+        .element-3 .title {
+            font-size: 28px;
+        }
+        
+        /* Цвета для разных групп */
+        .element-1 .circle {
+            background: #F1B84D;
+        }
+        .element-1 .rect-block {
+            background: #F8DBA0;
+        }
+        .element-1 .rect-block .title {
+            color: white;
+        }
+        
+        .element-2 .circle {
+            background: #3F88C6;
+        }
+        .element-2 .rect-block {
+            background: #65A5D3;
+        }
+        .element-2 .rect-block .title {
+            color: white;
+        }
+        
+        .element-3 .circle {
+            background: #88549C;
+        }
+        .element-3 .rect-block {
+            background: #B79DC0;
+        }
+        .element-3 .rect-block .title {
+            color: white;
+        }
+        
+        .extra-text {
+            color: #404040;
+            font-weight: 600;
+            font-size: clamp(11px, 2vw, 14px);
+            line-height: 1.5;
+            padding: 20px;
+            padding-top: 25px;
+            padding-left: 70px;
+            background: #eeeeee;
+            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+            margin-left: -63px;
+            width: calc(100% + 63px);
+            margin-top: -98.5px;
+            padding-top: 123.5px;
+        }
+        
+        .right-column {
+            flex: 0.8;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .right-big {
+            width: 100%;
+            min-height: 500px;
+            background: #65A5D3;
+            border-radius: 60px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .right-part {
+            width: 50%;
+            height: 100%;
+            background: #89B6D6;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-radius: 60px 60px 60px 0;
+        }
+        
+        .right-small {
+            width: 100%;
+            min-height: 200px;
+            background: #3F88C6;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .right-text {
+            color: white;
+            font-weight: bold;
+            font-size: clamp(18px, 3vw, 24px);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        @media (max-width: 1024px) {
+            .flex-wrapper {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .left-column {
+                width: 100%;
+                gap: 30px;
+            }
+            .right-column {
+                width: 100%;
+            }
+            .element-wrapper,
+            .element-wrapper-with-text {
+                padding-top: 57px;
+                padding-left: 57px;
+            }
+            .rect-block {
+                padding-left: 170px;
+            }
+            .extra-text {
+                margin-top: -98.5px;
+                padding-top: 123.5px;
+                padding-left: 60px;
+                margin-left: -57px;
+                width: calc(100% + 57px);
+            }
+            .element-1 .title { font-size: 22px; }
+            .element-2 .title { font-size: 20px; }
+            .element-3 .title { font-size: 26px; }
+            .exclusion-text { font-size: 15px; }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            .left-column {
+                gap: 20px;
+            }
+            .element-wrapper,
+            .element-wrapper-with-text {
+                padding-top: 39px;
+                padding-left: 39px;
+            }
+            .circle {
+                width: 130px;
+                height: 130px;
+            }
+            .circle .percent {
+                font-size: 20px;
+            }
+            .circle .max {
+                font-size: 10px;
+            }
+            .rect-block {
+                padding-left: 110px;
+                padding-right: 15px;
+                height: auto;
+                min-height: 110px;
+                border-radius: 55px;
+            }
+            .group-main { font-size: 20px; }
+            .group-label { font-size: 13px; }
+            .exclusion-text { font-size: 12px; }
+            
+            .element-1 .title { font-size: 16px; }
+            .element-2 .title { font-size: 15px; }
+            .element-3 .title { font-size: 18px; }
+            
+            .extra-text {
+                margin-top: -55px;
+                padding-top: 70px;
+                padding-left: 30px;
+                padding-right: 30px;
+                margin-left: -39px;
+                width: calc(100% + 39px);
+                font-size: 10px;
+            }
+            .right-big { min-height: 250px; }
+            .right-small { min-height: 130px; }
+            .right-text { font-size: 16px; }
+        }
+        
+        @media (max-width: 480px) {
+            .element-wrapper,
+            .element-wrapper-with-text {
+                padding-top: 33px;
+                padding-left: 33px;
+            }
+            .circle {
+                width: 110px;
+                height: 110px;
+            }
+            .circle .percent {
+                font-size: 18px;
+            }
+            .circle .max {
+                font-size: 9px;
+            }
+            .rect-block {
+                padding-left: 90px;
+                border-radius: 50px;
+                min-height: 90px;
+            }
+            .group-main { font-size: 18px; }
+            .group-label { font-size: 12px; }
+            .exclusion-text { font-size: 11px; }
+            
+            .element-1 .title { font-size: 14px; }
+            .element-2 .title { font-size: 13px; }
+            .element-3 .title { font-size: 16px; }
+            
+            .extra-text {
+                margin-top: -45px;
+                padding-top: 55px;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-left: -33px;
+                width: calc(100% + 33px);
+                font-size: 9px;
+            }
+        }
+    </style>
+    <title>Группы операций - Адаптивная версия</title>
+</head>
+<body>
+    <div class="container">
+        <div class="flex-wrapper">
+            
+            <div class="left-column">
+                
+                <div class="element-wrapper">
+                    <div class="element element-1">
+                        <div class="circle">
+                            <div class="percent">0,4%</div>
+                            <div class="max">максимум<br>1500 руб.</div>
+                        </div>
+                        <div class="rect-block">
+                            <div class="title">
+                                <span class="group-label">2-я группа*</span>
+                                <span class="group-main">СОЦИАЛЬНО-ЗНАЧИМЫЕ СЕГМЕНТЫ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="element-wrapper-with-text">
+                    <div class="element element-2">
+                        <div class="circle">
+                            <div class="percent">0,7%</div>
+                            <div class="max">максимум<br>1500 руб.</div>
+                        </div>
+                        <div class="rect-block">
+                            <div class="title">
+                                <span class="group-label">3-я группа*</span>
+                                <span class="group-main">ВСЕ СЕГМЕНТЫ</span>
+                                <span class="exclusion-text">ЗА ИСКЛЮЧЕНИЕМ 2-Й И 4-Й ГРУППЫ ОПЕРАЦИЙ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="extra-text">
+                        телеком, медицина, страхование, благотворительность, инвестиционные фонды, УК, НПФ, потребительские товары, самозанятые, образование, транспорт
+                    </div>
+                </div>
+                
+                <div class="element-wrapper">
+                    <div class="element element-3">
+                        <div class="circle">
+                            <div class="percent">0,2%</div>
+                            <div class="max">максимум<br>10 руб.</div>
+                        </div>
+                        <div class="rect-block">
+                            <div class="title">
+                                <span class="group-label">4-я группа*</span>
+                                <span class="group-main">СФЕРА ЖКХ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="right-big">
+                    <div class="right-text">
+                        ИНФОРМАЦИЯ<br>О ГРУППАХ
+                    </div>
+                    <div class="right-part"></div>
+                </div>
+                
+                <div class="right-small">
+                    <div class="right-text">
+                        ДОПОЛНИТЕЛЬНЫЕ<br>ДАННЫЕ
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
