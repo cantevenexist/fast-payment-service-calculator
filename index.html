@@ -44,7 +44,7 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 10px;
         }
         
         .element-wrapper,
@@ -184,7 +184,7 @@
         .extra-text {
             color: #404040;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.5;
             padding: 14px;
             padding-top: 20px;
@@ -204,7 +204,7 @@
             min-width: 260px;
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 20px;
         }
         
         .right-big {
@@ -384,7 +384,7 @@
             }
             .left-column {
                 width: 100%;
-                gap: 25px;
+                gap: 15px;
             }
             .right-column {
                 width: 100%;
@@ -403,7 +403,7 @@
                 padding-left: 45px;
                 margin-left: -40px;
                 width: calc(100% + 40px);
-                font-size: 16px;
+                font-size: 18px;
             }
         }
         
@@ -412,7 +412,7 @@
                 padding: 15px 12px;
             }
             .left-column {
-                gap: 25px;
+                gap: 15px;
             }
             .element-wrapper,
             .element-wrapper-with-text {
@@ -607,11 +607,181 @@
                 font-size: 14px;
             }
         }
+        
+        /* Стили для пояснительных блоков */
+        .info-header {
+            max-width: 1200px;
+            margin: 0 auto 30px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .info-message {
+            background: #f0f4f8;
+            border-radius: 20px;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-weight: 300;
+            font-family: 'Geologica';
+            font-size: 24px;
+            line-height: 1.5;
+            color: #1a1a2e;
+            border-left: 5px solid #3F88C6;
+        }
+        
+        .info-link {
+            background: #f0f4f8;
+            border-radius: 20px;
+            padding: 18px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-weight: 300;
+            font-family: 'Geologica';
+            border-left: 5px solid #3F88C6;
+        }
+        
+        .link-text {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: #1a1a2e;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+        
+        .info-icon,
+        .link-icon {
+            flex-shrink: 0;
+            color: #3F88C6;
+            width: 24px;
+            height: 24px;
+        }
+        
+        .info-message span,
+        .link-text span {
+            flex: 1;
+        }
+        
+        .info-link a {
+            color: #3F88C6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 20px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.2s ease;
+            word-break: break-all;
+            display: inline-block;
+            padding: 8px 0 4px 38px;
+            border-top: 1px solid rgba(63, 136, 198, 0.2);
+            margin-top: 4px;
+        }
+        
+        .info-link a:hover {
+            color: #1a5a8a;
+            text-decoration: underline;
+        }
+        
+        /* Адаптивность для планшетов */
+        @media (max-width: 768px) {
+            .info-header {
+                margin-bottom: 25px;
+                gap: 14px;
+            }
+            
+            .info-message {
+                padding: 16px 20px;
+                font-size: 18px;
+                border-left-width: 4px;
+                border-radius: 18px;
+            }
+            
+            .link-text {
+                font-size: 18px;
+            }
+            
+            .info-link {
+                padding: 16px 20px;
+                border-left-width: 4px;
+                border-radius: 18px;
+            }
+            
+            .info-icon,
+            .link-icon {
+                width: 22px;
+                height: 22px;
+            }
+            
+            .info-link a {
+                font-size: 18px;
+                padding: 6px 0 2px 36px;
+            }
+        }
+        
+        /* Адаптивность для телефонов */
+        @media (max-width: 480px) {
+            .info-header {
+                margin-bottom: 20px;
+                gap: 12px;
+            }
+            
+            .info-message {
+                padding: 14px 16px;
+                font-size: 16px;
+                border-radius: 16px;
+                border-left-width: 4px;
+            }
+            
+            .link-text {
+                font-size: 16px;
+                gap: 12px;
+            }
+            
+            .info-link {
+                padding: 14px 16px;
+                border-left-width: 4px;
+                border-radius: 16px;
+            }
+            
+            .info-icon,
+            .link-icon {
+                width: 20px;
+                height: 20px;
+            }
+            
+            .info-link a {
+                font-size: 16px;
+                padding: 6px 0 2px 32px;
+            }
+        }
     </style>
     <title>Группы операций - Калькулятор выгоды СБП</title>
 </head>
 <body>
     <div class="container">
+        <!-- Пояснительные блоки вверху страницы -->
+        <div class="info-header">
+            <div class="info-message">
+                <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="currentColor"/>
+                </svg>
+                <span>Для расчета определите тариф, соответствующий роде деятельности Вашей организации.</span>
+            </div>
+            
+            <div class="info-link">
+                <div class="link-text">
+                    <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 7h2v2H7V7zm4 0h6v2h-6V7zm-4 4h2v2H7v-2zm4 0h6v2h-6v-2zm-4 4h2v2H7v-2zm4 0h6v2h-6v-2z" fill="currentColor"/>
+                    </svg>
+                    <span>Точно определить размер комиссии можно по МСС торгово-сервисной точки на сайте АО "НСПК"</span>
+                </div>
+                <a href="https://sbp.nspk.ru" target="_blank" rel="noopener noreferrer">https://sbp.nspk.ru</a>
+            </div>
+        </div>
+
         <div class="flex-wrapper">
             
             <div class="left-column">
