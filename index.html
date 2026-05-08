@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -78,13 +79,14 @@
         }
         
         .circle .percent {
-            font-size: 24px;
+            font-family: 'Geologica';
+            font-size: 36px;
             font-weight: 800;
             line-height: 1.2;
         }
         
         .circle .max {
-            font-size: 11px;
+            font-size: 16px;
             font-weight: 600;
             line-height: 1.4;
             margin-top: 5px;
@@ -108,50 +110,52 @@
         
         .rect-block .title {
             font-weight: 800;
-            line-height: 1.2;
+            line-height: 1.1;
             white-space: pre-line;
             display: block;
             width: 100%;
         }
         
         .group-main {
-            font-weight: 800;
+            font-family: 'Geologica';
+            font-weight: 600;
             display: block;
-            font-size: 22px;
+            font-size: 30px;
         }
         
         .group-label {
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 600;
             opacity: 0.9;
             display: block;
+            margin-bottom: -10px;
         }
         
         .exclusion-text {
             font-size: 12px;
             font-weight: 700;
-            margin-top: 3px;
+            margin-top: -10px;
             letter-spacing: 0.3px;
             display: block;
         }
         
         .element-1 .title {
-            font-size: 18px;
-        }
-        
-        .element-2 .title {
-            font-size: 16px;
-        }
-        
-        .element-3 .title {
             font-size: 20px;
         }
         
+        .element-2 .title {
+            font-size: 18px;
+        }
+        
+        .element-3 .title {
+            font-size: 22px;
+        }
+        
         .element-1 .circle {
-            background: #F1B84D;
+            background: #f7a712;
         }
         .element-1 .rect-block {
-            background: #F8DBA0;
+            background: #fac55b;
         }
         .element-1 .rect-block .title {
             color: white;
@@ -179,11 +183,11 @@
         
         .extra-text {
             color: #404040;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 1.4;
-            padding: 12px;
-            padding-top: 18px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            padding: 14px;
+            padding-top: 20px;
             padding-left: 50px;
             background: #eeeeee;
             border-radius: 20px;
@@ -232,7 +236,7 @@
         .info-rows-container.vertical-layout .info-row {
             flex-direction: column;
             align-items: stretch;
-            gap: 6px;
+            gap: 8px;
         }
         
         .info-rows-container.vertical-layout .input-wrapper {
@@ -242,13 +246,14 @@
         .info-label {
             color: white;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 15px;
             flex-shrink: 0;
             min-width: 140px;
         }
         
         .info-rows-container.vertical-layout .info-label {
             min-width: auto;
+            font-size: 15px;
         }
         
         .input-wrapper {
@@ -345,6 +350,7 @@
         }
         
         .benefit-block {
+            font-family: 'Geologica';
             background: rgba(255,255,255,0.2);
             border-radius: 20px;
             padding: 15px;
@@ -354,20 +360,20 @@
         
         .benefit-label {
             color: white;
-            font-size: 14px;
+            font-size: 20px;
             font-weight: 500;
             margin-bottom: 8px;
         }
         
         .benefit-amount {
             color: white;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 800;
         }
         
         .benefit-note {
             color: rgba(255,255,255,0.8);
-            font-size: 11px;
+            font-size: 16px;
             margin-top: 5px;
         }
         
@@ -397,7 +403,7 @@
                 padding-left: 45px;
                 margin-left: -40px;
                 width: calc(100% + 40px);
-                font-size: 12px;
+                font-size: 16px;
             }
         }
         
@@ -414,38 +420,47 @@
                 padding-left: 35px;
             }
             .circle {
-                width: 110px;
-                height: 110px;
+                width: 120px;
+                height: 120px;
             }
             .circle .percent {
-                font-size: 18px;
+                font-size: 30px;
             }
             .circle .max {
-                font-size: 9px;
+                font-size: 14px;
             }
             .rect-block {
-                padding-left: 85px;
+                padding-left: 95px;
                 padding-right: 12px;
-                height: 100px;
-                min-height: 100px;
-                border-radius: 50px;
+                height: 130px;
+                min-height: 130px;
+                border-radius: 65px;
             }
-            .group-main { font-size: 16px; }
-            .group-label { font-size: 11px; }
-            .exclusion-text { font-size: 10px; }
+            .group-main { 
+                font-size: 26px; 
+            }
+            .group-label { 
+                font-size: 14px; 
+                margin-bottom: -10px;
+            }
+            .exclusion-text { 
+                font-size: 12px; 
+                margin-top: -10px;
+            }
             
-            .element-1 .title { font-size: 14px; }
-            .element-2 .title { font-size: 13px; }
-            .element-3 .title { font-size: 16px; }
+            .element-1 .title { font-size: 18px; }
+            .element-2 .title { font-size: 16px; }
+            .element-3 .title { font-size: 20px; }
             
             .extra-text {
-                margin-top: -50px;
-                padding-top: 65px;
-                padding-left: 35px;
+                margin-top: -65px;
+                padding-top: 80px;
+                padding-left: 40px;
                 padding-right: 15px;
                 margin-left: -35px;
                 width: calc(100% + 35px);
-                font-size: 11px;
+                font-size: 16px;
+                line-height: 1.5;
             }
             
             .right-big {
@@ -454,8 +469,12 @@
             }
             
             .info-label {
-                font-size: 13px;
+                font-size: 14px;
                 min-width: auto;
+            }
+            
+            .info-rows-container.vertical-layout .info-label {
+                font-size: 14px;
             }
             
             .input-wrapper {
@@ -465,30 +484,38 @@
             .info-row {
                 flex-direction: column;
                 align-items: stretch;
-                gap: 6px;
+                gap: 8px;
             }
             
             .input-wrapper input,
             .input-wrapper select {
-                padding: 8px 30px 8px 12px;
-                font-size: 13px;
+                padding: 10px 35px 10px 14px;
+                font-size: 14px;
             }
             
             .input-wrapper .symbol {
-                font-size: 12px;
-                right: 12px;
+                font-size: 13px;
+                right: 14px;
             }
             
             .right-small {
-                padding: 15px;
+                padding: 18px;
             }
             
             .right-text {
-                font-size: 16px;
+                font-size: 17px;
             }
             
             .benefit-amount {
-                font-size: 20px;
+                font-size: 22px;
+            }
+            
+            .benefit-label {
+                font-size: 14px;
+            }
+            
+            .benefit-note {
+                font-size: 14px;
             }
         }
         
@@ -499,55 +526,85 @@
                 padding-left: 30px;
             }
             .circle {
-                width: 90px;
-                height: 90px;
+                width: 100px;
+                height: 100px;
             }
             .circle .percent {
-                font-size: 16px;
+                font-size: 26px;
             }
             .circle .max {
-                font-size: 8px;
+                font-size: 12px;
             }
             .rect-block {
-                padding-left: 70px;
-                border-radius: 45px;
-                min-height: 80px;
+                padding-left: 75px;
+                border-radius: 50px;
+                min-height: 110px;
+                height: 110px;
             }
-            .group-main { font-size: 14px; }
-            .group-label { font-size: 10px; }
-            .exclusion-text { font-size: 9px; }
+            .group-main { 
+                font-size: 24px; 
+            }
+            .group-label { 
+                font-size: 13px; 
+                margin-bottom: -10px;
+            }
+            .exclusion-text { 
+                font-size: 12px; 
+                margin-top: -10px;
+            }
+            
+            .element-1 .title { font-size: 16px; }
+            .element-2 .title { font-size: 15px; }
+            .element-3 .title { font-size: 18px; }
             
             .extra-text {
-                margin-top: -40px;
-                padding-top: 55px;
-                padding-left: 25px;
+                margin-top: -55px;
+                padding-top: 70px;
+                padding-left: 30px;
                 margin-left: -30px;
                 width: calc(100% + 30px);
-                font-size: 8px;
+                font-size: 16px;
+                line-height: 1.45;
             }
             
             .right-big {
-                padding: 15px 12px;
-                gap: 12px;
+                padding: 18px 12px;
+                gap: 15px;
             }
             
             .info-label {
-                font-size: 12px;
+                font-size: 13px;
+            }
+            
+            .info-rows-container.vertical-layout .info-label {
+                font-size: 13px;
             }
             
             .input-wrapper input,
             .input-wrapper select {
-                padding: 6px 25px 6px 10px;
-                font-size: 12px;
+                padding: 8px 28px 8px 10px;
+                font-size: 13px;
             }
             
             .input-wrapper .symbol {
-                font-size: 11px;
+                font-size: 12px;
                 right: 10px;
             }
             
+            .right-text {
+                font-size: 16px;
+            }
+            
             .benefit-amount {
-                font-size: 18px;
+                font-size: 20px;
+            }
+            
+            .benefit-label {
+                font-size: 13px;
+            }
+            
+            .benefit-note {
+                font-size: 14px;
             }
         }
     </style>
@@ -562,12 +619,12 @@
                 <div class="element-wrapper">
                     <div class="element element-1">
                         <div class="circle">
-                            <div class="percent">0,4%</div>
+                            <div class="percent">0,4 %</div>
                             <div class="max">максимум<br>1500 руб.</div>
                         </div>
                         <div class="rect-block">
                             <div class="title">
-                                <span class="group-label">2-я группа*</span>
+                                <span class="group-label">2-я группа</span>
                                 <span class="group-main">СОЦИАЛЬНО-ЗНАЧИМЫЕ СЕГМЕНТЫ</span>
                             </div>
                         </div>
@@ -577,12 +634,12 @@
                 <div class="element-wrapper-with-text">
                     <div class="element element-2">
                         <div class="circle">
-                            <div class="percent">0,7%</div>
+                            <div class="percent">0,7 %</div>
                             <div class="max">максимум<br>1500 руб.</div>
                         </div>
                         <div class="rect-block">
                             <div class="title">
-                                <span class="group-label">3-я группа*</span>
+                                <span class="group-label">3-я группа</span>
                                 <span class="group-main">ВСЕ СЕГМЕНТЫ</span>
                                 <span class="exclusion-text">ЗА ИСКЛЮЧЕНИЕМ 2-Й И 4-Й ГРУППЫ ОПЕРАЦИЙ</span>
                             </div>
@@ -596,12 +653,12 @@
                 <div class="element-wrapper">
                     <div class="element element-3">
                         <div class="circle">
-                            <div class="percent">0,2%</div>
+                            <div class="percent">0,2 %</div>
                             <div class="max">максимум<br>10 руб.</div>
                         </div>
                         <div class="rect-block">
                             <div class="title">
-                                <span class="group-label">4-я группа*</span>
+                                <span class="group-label">4-я группа</span>
                                 <span class="group-main">СФЕРА ЖКХ</span>
                             </div>
                         </div>
@@ -644,12 +701,12 @@
                 
                 <div class="right-small">
                     <div class="right-text">
-                        ЭКОНОМИЯ<br>ПРИ ИСПОЛЬЗОВАНИИ СБП
+                        ЭКОНОМИЯ ПРИ ИСПОЛЬЗОВАНИИ СБП
                     </div>
                     <div class="benefit-block">
                         <div class="benefit-label">Выгода за год</div>
                         <div class="benefit-amount" id="benefitAmount">0 ₽</div>
-                        <div class="benefit-note">* по сравнению с эквайрингом</div>
+                        <div class="benefit-note">по сравнению с эквайрингом</div>
                     </div>
                 </div>
             </div>
@@ -686,13 +743,10 @@
             const benefitElement = document.getElementById('benefitAmount');
             if (benefit > 0) {
                 benefitElement.innerHTML = formatter.format(benefit);
-                benefitElement.style.color = '#90EE90';
             } else if (benefit < 0) {
-                benefitElement.innerHTML = formatter.format(Math.abs(benefit));
-                benefitElement.style.color = '#FFCCCC';
+                benefitElement.innerHTML = '-' + formatter.format(Math.abs(benefit));
             } else {
                 benefitElement.innerHTML = '0 ₽';
-                benefitElement.style.color = 'white';
             }
         }
         
