@@ -80,13 +80,13 @@
         
         .circle .percent {
             font-family: 'Geologica';
-            font-size: 36px;
+            font-size: clamp(26px, 5vw, 36px);
             font-weight: 800;
             line-height: 1.2;
         }
         
         .circle .max {
-            font-size: 16px;
+            font-size: clamp(12px, 3vw, 16px);
             font-weight: 600;
             line-height: 1.4;
             margin-top: 5px;
@@ -120,19 +120,19 @@
             font-family: 'Geologica';
             font-weight: 600;
             display: block;
-            font-size: 30px;
+            font-size: clamp(20px, 5vw, 30px);
         }
         
         .element-1 .title {
-            font-size: 20px;
+            font-size: clamp(16px, 3.5vw, 20px);
         }
         
         .element-2 .title {
-            font-size: 18px;
+            font-size: clamp(15px, 3vw, 18px);
         }
         
         .element-3 .title {
-            font-size: 22px;
+            font-size: clamp(18px, 4vw, 22px);
         }
         
         .element-1 .circle {
@@ -168,7 +168,7 @@
         .extra-text {
             color: #404040;
             font-weight: 400;
-            font-size: 18px;
+            font-size: clamp(14px, 3.5vw, 18px);
             line-height: 1.5;
             padding: 14px;
             padding-top: 20px;
@@ -230,14 +230,14 @@
         .info-label {
             color: white;
             font-weight: 400;
-            font-size: 15px;
+            font-size: clamp(13px, 3vw, 15px);
             flex-shrink: 0;
             min-width: 140px;
         }
         
         .info-rows-container.vertical-layout .info-label {
             min-width: auto;
-            font-size: 15px;
+            font-size: clamp(13px, 3vw, 15px);
         }
         
         .input-wrapper {
@@ -253,7 +253,7 @@
             border: none;
             border-radius: 10px;
             font-family: 'Inter', sans-serif;
-            font-size: 14px;
+            font-size: clamp(13px, 3vw, 14px);
             font-weight: 500;
             background: white;
             color: #333;
@@ -292,7 +292,7 @@
             transform: translateY(-50%);
             color: #999;
             font-weight: 500;
-            font-size: 13px;
+            font-size: clamp(12px, 2.5vw, 13px);
             pointer-events: none;
         }
         
@@ -323,10 +323,21 @@
             gap: 15px;
         }
         
-        .right-text {
+        .right-text-1 {
             color: white;
             font-weight: bold;
-            font-size: 18px;
+            font-size: clamp(20px, 5vw, 28px);
+            text-align: center;
+            padding: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .right-text-2 {
+            color: white;
+            font-weight: bold;
+            font-size: clamp(16px, 3.5vw, 18px);
+            margin-top: 5px;
             text-align: center;
             padding: 0;
             position: relative;
@@ -344,20 +355,20 @@
         
         .benefit-label {
             color: white;
-            font-size: 20px;
+            font-size: clamp(14px, 3.5vw, 20px);
             font-weight: 500;
             margin-bottom: 8px;
         }
         
         .benefit-amount {
             color: white;
-            font-size: 26px;
+            font-size: clamp(20px, 5vw, 26px);
             font-weight: 800;
         }
         
         .benefit-note {
             color: rgba(255,255,255,0.8);
-            font-size: 16px;
+            font-size: clamp(13px, 3vw, 16px);
             margin-top: 5px;
         }
         
@@ -387,9 +398,7 @@
                 padding-left: 45px;
                 margin-left: -40px;
                 width: calc(100% + 40px);
-                font-size: 18px;
             }
-            .info-footer {font-size: 18px;}
         }
         
         @media (max-width: 768px) {
@@ -408,12 +417,6 @@
                 width: 120px;
                 height: 120px;
             }
-            .circle .percent {
-                font-size: 30px;
-            }
-            .circle .max {
-                font-size: 14px;
-            }
             .rect-block {
                 padding-left: 95px;
                 padding-right: 12px;
@@ -421,14 +424,6 @@
                 min-height: 130px;
                 border-radius: 65px;
             }
-            .group-main { 
-                font-size: 26px; 
-            }
-            
-            .element-1 .title { font-size: 18px; }
-            .element-2 .title { font-size: 16px; }
-            .element-3 .title { font-size: 20px; }
-            
             .extra-text {
                 margin-top: -65px;
                 padding-top: 80px;
@@ -436,11 +431,7 @@
                 padding-right: 15px;
                 margin-left: -35px;
                 width: calc(100% + 35px);
-                font-size: 16px;
-                line-height: 1.5;
             }
-
-            .info-footer {font-size: 16px;}
 
             .right-big {
                 padding: 20px 15px;
@@ -448,12 +439,7 @@
             }
             
             .info-label {
-                font-size: 14px;
                 min-width: auto;
-            }
-            
-            .info-rows-container.vertical-layout .info-label {
-                font-size: 14px;
             }
             
             .input-wrapper {
@@ -469,32 +455,14 @@
             .input-wrapper input,
             .input-wrapper select {
                 padding: 10px 35px 10px 14px;
-                font-size: 14px;
             }
             
             .input-wrapper .symbol {
-                font-size: 13px;
                 right: 14px;
             }
             
             .right-small {
                 padding: 18px;
-            }
-            
-            .right-text {
-                font-size: 17px;
-            }
-            
-            .benefit-amount {
-                font-size: 22px;
-            }
-            
-            .benefit-label {
-                font-size: 14px;
-            }
-            
-            .benefit-note {
-                font-size: 14px;
             }
         }
         
@@ -508,90 +476,41 @@
                 width: 100px;
                 height: 100px;
             }
-            .circle .percent {
-                font-size: 26px;
-            }
-            .circle .max {
-                font-size: 12px;
-            }
             .rect-block {
                 padding-left: 75px;
                 border-radius: 50px;
                 min-height: 110px;
                 height: 110px;
             }
-            .group-main { 
-                font-size: 24px; 
-            }
-            
-            .element-1 .title { font-size: 16px; }
-            .element-2 .title { font-size: 15px; }
-            .element-3 .title { font-size: 18px; }
-            
             .extra-text {
                 margin-top: -55px;
                 padding-top: 70px;
                 padding-left: 30px;
                 margin-left: -30px;
                 width: calc(100% + 30px);
-                font-size: 16px;
-                line-height: 1.45;
             }
-            .info-footer {font-size: 16px;}
             
             .right-big {
                 padding: 18px 12px;
                 gap: 15px;
             }
             
-            .info-label {
-                font-size: 13px;
-            }
-            
-            .info-rows-container.vertical-layout .info-label {
-                font-size: 13px;
-            }
-            
             .input-wrapper input,
             .input-wrapper select {
                 padding: 8px 28px 8px 10px;
-                font-size: 13px;
             }
             
             .input-wrapper .symbol {
-                font-size: 12px;
                 right: 10px;
-            }
-            
-            .right-text {
-                font-size: 16px;
-            }
-            
-            .benefit-amount {
-                font-size: 20px;
-            }
-            
-            .benefit-label {
-                font-size: 13px;
-            }
-            
-            .benefit-note {
-                font-size: 14px;
             }
         }
         
-        /* Стили для пояснительных блоков */
         .info-header {
             max-width: 1200px;
             margin: 0 auto 30px auto;
             display: flex;
             flex-direction: column;
             gap: 16px;
-        }
-
-        .info-main-message-1 {
-            text-align: center;
-            margin-bottom: 8px;
         }
 
         .info-main-message-1 span {
@@ -605,11 +524,6 @@
             letter-spacing: 2px;
         }
 
-        .info-main-message-2 {
-            text-align: center;
-            margin-bottom: 24px;
-        }
-
         .info-main-message-2 span {
             font-family: 'Geologica', sans-serif;
             font-weight: 400;
@@ -618,18 +532,13 @@
             line-height: 1.4;
         }
 
-        .commissions-header {
-            max-width: 1200px;
-            margin: 30px auto 0px auto;
-            text-align: center;
-            font-size: clamp(20px, 4vw, 40px);
-        }
-
         .commissions-header span {
             font-family: 'Geologica', sans-serif;
             font-weight: 600;
+            font-size: clamp(20px, 4vw, 40px);
             color: #1a1a2e;
             line-height: 1.4;
+            margin-top: 30px;
             background: #3F88C6;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -648,7 +557,7 @@
             color: #333;
             padding-top: 20px;
             font-style: italic;
-            font-size: 18px;
+            font-size: clamp(14px, 3vw, 18px);
         }
         
         .info-message {
@@ -660,7 +569,7 @@
             gap: 14px;
             font-weight: 300;
             font-family: 'Geologica';
-            font-size: 24px;
+            font-size: clamp(16px, 4vw, 24px);
             line-height: 1.5;
             color: #1a1a2e;
             border-left: 5px solid #3F88C6;
@@ -683,7 +592,7 @@
             align-items: center;
             gap: 14px;
             color: #1a1a2e;
-            font-size: 24px;
+            font-size: clamp(16px, 4vw, 24px);
             line-height: 1.5;
         }
         
@@ -704,7 +613,7 @@
             color: #3F88C6;
             text-decoration: none;
             font-weight: 600;
-            font-size: 20px;
+            font-size: clamp(16px, 3vw, 20px);
             font-family: 'Inter', sans-serif;
             transition: all 0.2s ease;
             word-break: break-all;
@@ -719,7 +628,6 @@
             text-decoration: underline;
         }
         
-        /* Адаптивность для планшетов */
         @media (max-width: 768px) {
             .info-header {
                 margin-bottom: 25px;
@@ -732,13 +640,12 @@
             
             .info-message {
                 padding: 16px 20px;
-                font-size: 18px;
                 border-left-width: 4px;
                 border-radius: 18px;
             }
             
             .link-text {
-                font-size: 18px;
+                gap: 12px;
             }
             
             .info-link {
@@ -754,12 +661,10 @@
             }
             
             .info-link a {
-                font-size: 18px;
                 padding: 6px 0 2px 36px;
             }
         }
         
-        /* Адаптивность для телефонов */
         @media (max-width: 480px) {
             .info-header {
                 margin-bottom: 20px;
@@ -772,13 +677,11 @@
             
             .info-message {
                 padding: 14px 16px;
-                font-size: 16px;
                 border-radius: 16px;
                 border-left-width: 4px;
             }
             
             .link-text {
-                font-size: 16px;
                 gap: 12px;
             }
             
@@ -795,7 +698,6 @@
             }
             
             .info-link a {
-                font-size: 16px;
                 padding: 6px 0 2px 32px;
             }
         }
@@ -804,15 +706,15 @@
 </head>
 <body>
     <div class="container">
-        <!-- Пояснительные блоки вверху страницы -->
         <div class="info-header">
-            <div class="info-main-message-1">
-                <span>КАЛЬКУЛЯТОР</span>
+            <div>
+                <div class="info-main-message-1">
+                    <span>КАЛЬКУЛЯТОР</span>
+                </div>
+                <div class="info-main-message-2">
+                    <span>расчета экономии при реализации товаров/оказании услуг через СБП</span>
+                </div>
             </div>
-            <div class="info-main-message-2">
-                <span>расчета экономии при реализации товаров/оказании услуг через СБП</span>
-            </div>
-            
             <div class="info-message">
                 <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="currentColor"/>
@@ -920,8 +822,9 @@
                 </div>
                 
                 <div class="right-small">
-                    <div class="right-text">
-                        ЭКОНОМИЯ<br>ПРИ ИСПОЛЬЗОВАНИИ СБП
+                    <div>
+                        <div class="right-text-1">ЭКОНОМИЯ</div>
+                        <div class="right-text-2">ПРИ ИСПОЛЬЗОВАНИИ СБП</div>
                     </div>
                     <div class="benefit-block">
                         <div class="benefit-label">Выгода за год</div>
@@ -942,22 +845,17 @@
 
     <script>
         function calculateBenefit() {
-            // Получаем значения
             const monthlyRevenue = parseFloat(document.getElementById('revenue').value) || 0;
             const acquiringRate = parseFloat(document.getElementById('acquiringRate').value) || 0;
             const sbpRate = parseFloat(document.getElementById('sbpRate').value) || 0;
             
-            // Расчет годовой выручки
             const yearlyRevenue = monthlyRevenue * 12;
             
-            // Расчет комиссий
             const acquiringFee = yearlyRevenue * (acquiringRate / 100);
             const sbpFee = yearlyRevenue * (sbpRate / 100);
             
-            // Расчет выгоды (разница между комиссиями)
             const benefit = acquiringFee - sbpFee;
             
-            // Форматирование результата
             const formatter = new Intl.NumberFormat('ru-RU', {
                 style: 'currency',
                 currency: 'RUB',
@@ -965,7 +863,6 @@
                 maximumFractionDigits: 0
             });
             
-            // Отображение результата
             const benefitElement = document.getElementById('benefitAmount');
             if (benefit > 0) {
                 benefitElement.innerHTML = formatter.format(benefit);
@@ -976,17 +873,14 @@
             }
         }
         
-        // Получаем элементы
         const revenueInput = document.getElementById('revenue');
         const acquiringInput = document.getElementById('acquiringRate');
         const sbpSelect = document.getElementById('sbpRate');
         
-        // Добавляем обработчики событий для автоматического пересчета
         revenueInput.addEventListener('input', calculateBenefit);
         acquiringInput.addEventListener('input', calculateBenefit);
         sbpSelect.addEventListener('change', calculateBenefit);
         
-        // Дополнительная обработка для корректного парсинга чисел с точкой
         acquiringInput.addEventListener('blur', function() {
             let value = parseFloat(this.value);
             if (!isNaN(value)) {
@@ -995,10 +889,8 @@
             calculateBenefit();
         });
         
-        // Запускаем расчет при загрузке
         calculateBenefit();
         
-        // Функция для адаптивного переключения лейблов
         function checkLayout() {
             const container = document.getElementById('infoRowsContainer');
             if (!container) return;
