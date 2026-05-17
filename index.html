@@ -123,22 +123,6 @@
             font-size: 30px;
         }
         
-        .group-label {
-            font-size: 15px;
-            font-weight: 600;
-            opacity: 0.9;
-            display: block;
-            margin-bottom: -10px;
-        }
-        
-        .exclusion-text {
-            font-size: 12px;
-            font-weight: 700;
-            margin-top: -10px;
-            letter-spacing: 0.3px;
-            display: block;
-        }
-        
         .element-1 .title {
             font-size: 20px;
         }
@@ -245,7 +229,7 @@
         
         .info-label {
             color: white;
-            font-weight: 600;
+            font-weight: 400;
             font-size: 15px;
             flex-shrink: 0;
             min-width: 140px;
@@ -314,7 +298,7 @@
         
         .input-wrapper input:focus,
         .input-wrapper select:focus {
-            box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+            box-shadow: 0 0 0 2px rgb(255, 255, 255);
         }
         
         .input-wrapper input[type="number"] {
@@ -405,6 +389,7 @@
                 width: calc(100% + 40px);
                 font-size: 18px;
             }
+            .info-footer {font-size: 18px;}
         }
         
         @media (max-width: 768px) {
@@ -439,14 +424,6 @@
             .group-main { 
                 font-size: 26px; 
             }
-            .group-label { 
-                font-size: 14px; 
-                margin-bottom: -10px;
-            }
-            .exclusion-text { 
-                font-size: 12px; 
-                margin-top: -10px;
-            }
             
             .element-1 .title { font-size: 18px; }
             .element-2 .title { font-size: 16px; }
@@ -462,7 +439,9 @@
                 font-size: 16px;
                 line-height: 1.5;
             }
-            
+
+            .info-footer {font-size: 16px;}
+
             .right-big {
                 padding: 20px 15px;
                 gap: 15px;
@@ -544,14 +523,6 @@
             .group-main { 
                 font-size: 24px; 
             }
-            .group-label { 
-                font-size: 13px; 
-                margin-bottom: -10px;
-            }
-            .exclusion-text { 
-                font-size: 12px; 
-                margin-top: -10px;
-            }
             
             .element-1 .title { font-size: 16px; }
             .element-2 .title { font-size: 15px; }
@@ -566,6 +537,7 @@
                 font-size: 16px;
                 line-height: 1.45;
             }
+            .info-footer {font-size: 16px;}
             
             .right-big {
                 padding: 18px 12px;
@@ -615,6 +587,19 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
+        }
+
+        .info-footer {
+            max-width: 1200px;
+            margin: 50px auto 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            border-top: #333 1px solid;
+            color: #333;
+            padding-top: 20px;
+            font-style: italic;
+            font-size: 18px;
         }
         
         .info-message {
@@ -692,6 +677,10 @@
                 gap: 14px;
             }
             
+            .info-footer {
+                margin-top: 25px;
+            }
+            
             .info-message {
                 padding: 16px 20px;
                 font-size: 18px;
@@ -726,6 +715,10 @@
             .info-header {
                 margin-bottom: 20px;
                 gap: 12px;
+            }
+
+            .info-footer {
+                margin-top: 20px;
             }
             
             .info-message {
@@ -764,11 +757,18 @@
     <div class="container">
         <!-- Пояснительные блоки вверху страницы -->
         <div class="info-header">
+            <div class="info-main-message-1">
+                <span>КАЛЬКУЛЯТОР</span>
+            </div>
+            <div class="info-main-message-2">
+                <span>расчета экономии при реализации товаров/оказании услуг через СБП</span>
+            </div>
+            
             <div class="info-message">
                 <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="currentColor"/>
                 </svg>
-                <span>Для расчета определите тариф СБП, соответствующий роду деятельности Вашей организации</span>
+                <span>Для расчёта определите тариф СБП, соответствующий роду деятельности Вашей организации</span>
             </div>
             
             <div class="info-link">
@@ -778,7 +778,7 @@
                     </svg>
                     <span>Точно определить размер комиссии можно по МСС торгово-сервисной точки на сайте АО "НСПК"</span>
                 </div>
-                <a href="https://sbp.nspk.ru" target="_blank" rel="noopener noreferrer">https://sbp.nspk.ru</a>
+                <a href="https://sbp.nspk.ru/business" target="_blank" rel="noopener noreferrer">https://sbp.nspk.ru/business</a>
             </div>
         </div>
 
@@ -794,7 +794,6 @@
                         </div>
                         <div class="rect-block">
                             <div class="title">
-                                <span class="group-label">4-я группа</span>
                                 <span class="group-main">СФЕРА ЖКХ</span>
                             </div>
                         </div>
@@ -809,7 +808,6 @@
                         </div>
                         <div class="rect-block">
                             <div class="title">
-                                <span class="group-label">2-я группа</span>
                                 <span class="group-main">СОЦИАЛЬНО-ЗНАЧИМЫЕ СЕГМЕНТЫ</span>
                             </div>
                         </div>
@@ -827,9 +825,7 @@
                         </div>
                         <div class="rect-block">
                             <div class="title">
-                                <span class="group-label">3-я группа</span>
-                                <span class="group-main">ВСЕ СЕГМЕНТЫ</span>
-                                <span class="exclusion-text">ЗА ИСКЛЮЧЕНИЕМ 2-Й И 4-Й ГРУППЫ ОПЕРАЦИЙ</span>
+                                <span class="group-main">ВСЕ ОСТАЛЬНЫЕ СЕГМЕНТЫ БИЗНЕСА</span>
                             </div>
                         </div>
                     </div>
@@ -842,7 +838,7 @@
                         <div class="info-row">
                             <span class="info-label">Средняя выручка в месяц</span>
                             <div class="input-wrapper">
-                                <input type="number" id="revenue" placeholder="0" value="0">
+                                <input type="number" id="revenue" placeholder="0" value="">
                                 <span class="symbol">₽</span>
                             </div>
                         </div>
@@ -859,8 +855,9 @@
                             <span class="info-label">Тариф СБП</span>
                             <div class="input-wrapper">
                                 <select id="sbpRate">
+                                    <option value="0" selected>0</option>
                                     <option value="0.2">0.2</option>
-                                    <option value="0.4" selected>0.4</option>
+                                    <option value="0.4">0.4</option>
                                     <option value="0.7">0.7</option>
                                 </select>
                                 <span class="symbol">%</span>
@@ -871,7 +868,7 @@
                 
                 <div class="right-small">
                     <div class="right-text">
-                        ЭКОНОМИЯ ПРИ ИСПОЛЬЗОВАНИИ СБП
+                        ЭКОНОМИЯ<br>ПРИ ИСПОЛЬЗОВАНИИ СБП
                     </div>
                     <div class="benefit-block">
                         <div class="benefit-label">Выгода за год</div>
@@ -881,6 +878,12 @@
                 </div>
             </div>
             
+        </div>
+
+        <div class="info-footer">
+            <div class="info-message-footer">
+                <span>* Банк в праве по договоренности с торгово-сервисным предприятием установить размер комиссии меньший, чем закреплён Банком России (максимальный размер)</span>
+            </div>
         </div>
     </div>
 
